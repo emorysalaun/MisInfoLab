@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  background: #292929
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: #989797;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  cursor: default;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #ffffff; 
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+
+.nav-btn:hover {
+  text-decoration: underline;
+}
+
+/* Container that centers everything */
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+
+/* Top-right (or top-center) button */
+.top-btn {
+  align-self: flex-end;
+  margin-right: 14rem;
+  background: #aaa;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Search bar */
+.headline-input {
+  width: 80%;
+  max-width: 800px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Button grid under the input */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+}
+
+/* Buttons */
+.gen-btn {
+  background: #aaa;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Optional hover */
+.gen-btn:hover,
+.top-btn:hover {
+  background: #c1c1c1;
+}

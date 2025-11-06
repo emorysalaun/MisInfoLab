@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>misinfo-lab</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+      
+      <nav class ="navbar">
+        <p class = "navbar-title">MisInfoLab</p>
+        <button class="nav-btn" data-page="home">Home</button>
+        <button class="nav-btn" data-page="learn">Learn</button>
+        <button class="nav-btn" data-page="test">Test</button>
+      </nav>
+
+      <div class="generator-container">
+
+        <button class="top-btn">Choose Random Story</button>
+
+        <input 
+          type="text" 
+          id="headline-input" 
+          class="headline-input"
+          placeholder="Enter your topic / headline here…"
+        />
+
+        <div class="button-grid">
+          <button class="gen-btn">Clickbait</button>
+          <button class="gen-btn">Emotional Triggering</button>
+          <button class="gen-btn">Fake Facts</button>
+          <button class="gen-btn">Political Bias</button>
+          <button class="gen-btn">Randomize</button>
+        </div>
+
+      </div>
+
+
+
+      <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
