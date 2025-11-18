@@ -10,17 +10,41 @@ const groq = new Groq({
   dangerouslyAllowBrowser: true
 });
 
+// UI elements
+const generatorScreen = document.querySelector(".generator-container") as HTMLDivElement;
+const explanationScreen = document.getElementById("explanation-screen") as HTMLDivElement;
+const originalHeadlineText = document.getElementById("original-headline-text") as HTMLParagraphElement;
+const misinfoHeadlineText = document.getElementById("misinfo-headline-text") as HTMLParagraphElement;
+const explanationText = document.getElementById("explanation-text") as HTMLParagraphElement;
+
+const backBtn = document.getElementById("back-btn") as HTMLButtonElement;
+
+backBtn.addEventListener("click", hideExplanationScreen);
+
+
+function showExplanationScreen() {
+    generatorScreen.classList.add("hidden");
+    explanationScreen.classList.remove("hidden");
+  }
+  
+  function hideExplanationScreen() {
+    explanationScreen.classList.add("hidden");
+    generatorScreen.classList.remove("hidden");
+  }
+  
+
 async function applyGroqTransformation(mode: string, text: string): Promise<{ headline: string; explanation: string }> {
     try {
-      const prompt = `
+      const prompt =
+      
+      `
   You are an AI that rewrites headlines to demonstrate misinformation techniques.
   
   TASK:
-  1. Rewrite the headline using **${mode}** style misinformation.
+  1. Rewrite the headline using ${mode} style misinformation.
   2. Make it punchy, misleading, and emotionally manipulative.
   3. Bold the key misleading words or phrases using **markdown bold**.
   4. Then provide a short explanation of HOW and WHY this rewritten headline is an example of '${mode}' misinformation.
-  
   FORMAT YOUR RESPONSE EXACTLY LIKE THIS JSON (no extra text):
   {
     "headline": "MISINFORMATION_HEADLINE_HERE",
@@ -30,6 +54,7 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
   Original Headline:
   "${text}"
       `;
+
   
       const completion = await groq.chat.completions.create({
         model: "llama-3.1-8b-instant",
@@ -51,23 +76,36 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
   }
   
 
-export function setupMisinfoButtons() {
-  genButtons.forEach(btn => {
-    btn.addEventListener("click", async () => {
-      const mode = btn.textContent?.trim() ?? "";
-      const text = headlineInput.value || headlineInput.placeholder;
+  export function setupMisinfoButtons() {
+    genButtons.forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const mode = btn.textContent?.trim() ?? "";
+        const originalText = headlineInput.value || headlineInput.placeholder;
+  
+        if (!originalText) {
+          headlineInput.value = "Generate or type a headline first!";
+          return;
+        }
+  
+        headlineInput.value = "Generating…";
+  
+        const result = await applyGroqTransformation(mode, originalText);
 
-      if (!text) {
-        headlineInput.value = "Generate or type a headline first!";
-        return;
-      }
+        headlineInput.value = result.headline;
+  
+       //left box with original headline
+        originalHeadlineText.textContent = originalText;
 
-      // Show loading state
-      headlineInput.value = "Generating…";
+        //right box with rewritten misinfo headline (keeps bolding)
+        misinfoHeadlineText.innerHTML = result.headline;
 
-      const result = await applyGroqTransformation(mode, text);
+        // Fill explanation box
+        explanationText.innerHTML = `<strong>(${mode}) Explanation:</strong> ${result.explanation}`;
 
-      headlineInput.value = result.headline;
+  
+        // Show explanation screen
+        showExplanationScreen();
+      });
     });
-  });
-}
+  }
+  

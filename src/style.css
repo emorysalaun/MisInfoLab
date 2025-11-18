@@ -100,3 +100,70 @@ body {
 .hidden {
   display: none;
 }
+
+/* Explanation layout container */
+.explanation-container {
+  padding: 2rem;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Row holding the two boxes */
+.headline-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* White rounded boxes */
+.headline-box {
+  background: #ffffff;
+  color: #000;
+  padding: 1.5rem;
+  width: 45%;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.headline-box h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* Large text inside headline boxes */
+.headline-text {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+/* Explanation box under headlines */
+.explanation-box {
+  background: #ffffff;
+  color: #000;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.explanation-box h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+/* Back button */
+.back-btn {
+  background: #aaa;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #c1c1c1;
+}
