@@ -1,4 +1,5 @@
 import { setupMisinfoButtons } from "./misinfoify";
+import { setupLearnPage } from "./learn";
 
 const randomBtn = document.querySelector(".top-btn") as HTMLButtonElement;
 const headlineInput = document.getElementById("headline-input") as HTMLInputElement;
@@ -53,13 +54,11 @@ export function setupNavigation() {
     homeBtn.addEventListener("click", () => showScreen(homeScreen));
     learnBtn.addEventListener("click", () => showScreen(learnScreen));
     testBtn.addEventListener("click", () => showScreen(testScreen));
-  }
-
-
-
+}
 
 window.onload = () => {
     setupNavigation();
     setupMisinfoButtons();
+    setupLearnPage();
 };
 
