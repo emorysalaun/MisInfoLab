@@ -1,4 +1,5 @@
 import Groq from "groq-sdk";
+import { detectMisinformation } from "./detectmisinfo";
 
 const headlineInput = document.getElementById("headline-input") as HTMLInputElement;
 const genButtons = document.querySelectorAll(".gen-btn");
@@ -99,6 +100,19 @@ Original Headline:
         const result = await applyGroqTransformation(mode, originalText);
 
         headlineInput.value = result.headline;
+
+        const detection = await detectMisinformation(result.headline);
+        const detectionBox = document.getElementById("detection-results");
+        detectionBox.innerHTML = `
+            <h3>AI Detection</h3>
+            <p><strong>Misinformation Score:</strong> ${detection.misinformation_score}</p>
+            <p><strong>Emotional Triggering:</strong> ${detection.emotional_triggering}</p>
+            <p><strong>Clickbait:</strong> ${detection.clickbait}</p>
+            <p><strong>Political Bias:</strong> ${detection.political_bias}</p>
+            <p><strong>Manipulative Phrases:</strong> ${detection.manipulative_phrases.join(", ")}</p>
+            <p><strong>Psychological Triggers:</strong> ${detection.psychological_triggers.join(", ")}</p>
+            <p><strong>Analysis:</strong> ${detection.reasoning}</p>
+            `;
   
        //left box with original headline
         originalHeadlineText.textContent = markdownBoldToHtml(originalText);
