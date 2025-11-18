@@ -21,6 +21,10 @@ const backBtn = document.getElementById("back-btn") as HTMLButtonElement;
 
 backBtn.addEventListener("click", hideExplanationScreen);
 
+function markdownBoldToHtml(text: string): string {
+    // Replace **word** with <strong>word</strong>
+    return text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  }  
 
 function showExplanationScreen() {
     generatorScreen.classList.add("hidden");
@@ -35,25 +39,28 @@ function showExplanationScreen() {
 
 async function applyGroqTransformation(mode: string, text: string): Promise<{ headline: string; explanation: string }> {
     try {
-      const prompt =
-      
-      `
-  You are an AI that rewrites headlines to demonstrate misinformation techniques.
-  
-  TASK:
-  1. Rewrite the headline using ${mode} style misinformation.
-  2. Make it punchy, misleading, and emotionally manipulative.
-  3. Bold the key misleading words or phrases using **markdown bold**.
-  4. Then provide a short explanation of HOW and WHY this rewritten headline is an example of '${mode}' misinformation.
-  FORMAT YOUR RESPONSE EXACTLY LIKE THIS JSON (no extra text):
-  {
-    "headline": "MISINFORMATION_HEADLINE_HERE",
-    "explanation": "SHORT_EXPLANATION_HERE"
-  }
-  
-  Original Headline:
-  "${text}"
-      `;
+      const prompt = `
+You are an AI that rewrites headlines to demonstrate misinformation techniques.
+
+TASK:
+1. Rewrite the headline using ${mode} style misinformation.
+2. Make it punchy, misleading, and emotionally manipulative.
+3. Identify ONLY the manipulative/emotional words or phrases and bold JUST those using **markdown bold**.
+   - Do NOT bold the entire headline.
+   - Do NOT wrap the whole sentence in asterisks.
+   - Only bold the misleading/emotional words.
+4. Then provide a short explanation of HOW and WHY this rewritten headline is an example of '${mode}' misinformation.
+
+FORMAT YOUR RESPONSE EXACTLY LIKE THIS JSON (no extra commentary):
+
+{
+  "headline": "REWRITTEN HEADLINE WITH **BOLDED KEYWORDS ONLY**",
+  "explanation": "SHORT EXPLANATION HERE"
+}
+
+Original Headline:
+"${text}"
+        `;
 
   
       const completion = await groq.chat.completions.create({
@@ -94,13 +101,12 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
         headlineInput.value = result.headline;
   
        //left box with original headline
-        originalHeadlineText.textContent = originalText;
+        originalHeadlineText.textContent = markdownBoldToHtml(originalText);
 
-        //right box with rewritten misinfo headline (keeps bolding)
-        misinfoHeadlineText.innerHTML = result.headline;
-
-        // Fill explanation box
-        explanationText.innerHTML = `<strong>(${mode}) Explanation:</strong> ${result.explanation}`;
+        misinfoHeadlineText.innerHTML = markdownBoldToHtml(result.headline);
+        explanationText.innerHTML = markdownBoldToHtml(
+          `<strong>(${mode}) Explanation:</strong> ${result.explanation}`
+        );
 
   
         // Show explanation screen
