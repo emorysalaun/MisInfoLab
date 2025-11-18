@@ -217,3 +217,63 @@ body {
   margin-top: 0.3rem;
   line-height: 1.4rem;
 }
+
+.test-card {
+  background: #b3b3b3;
+  color: #000;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  border: 2px solid #dcdcdc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test-headline {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.test-choice {
+  background: #d7d7d7;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.test-choice:hover {
+  background: #ececec;
+}
+
+.test-choice.correct {
+  background: #8ef58e !important;
+}
+
+.test-choice.wrong {
+  background: #ff9c9c !important;
+}
+
+.start-btn {
+  background: #aaa;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  margin-top: 1rem;
+}
+
+.start-btn:hover {
+  background: #c1c1c1;
+}
+
+.start-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

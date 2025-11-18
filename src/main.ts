@@ -1,5 +1,6 @@
 import { setupMisinfoButtons } from "./misinfoify";
 import { setupLearnPage } from "./learn";
+import { setupTestPage } from "./test";
 
 const randomBtn = document.querySelector(".top-btn") as HTMLButtonElement;
 const headlineInput = document.getElementById("headline-input") as HTMLInputElement;
@@ -43,13 +44,25 @@ export function setupNavigation() {
     const explanationScreen = document.getElementById("explanation-screen") as HTMLDivElement;
   
     function showScreen(screen: HTMLElement) {
-      homeScreen.classList.add("hidden");
-      learnScreen.classList.add("hidden");
-      testScreen.classList.add("hidden");
-      explanationScreen.classList.add("hidden");
-  
-      screen.classList.remove("hidden");
-    }
+
+        // Hide all screens
+        homeScreen.classList.add("hidden");
+        learnScreen.classList.add("hidden");
+        testScreen.classList.add("hidden");
+        explanationScreen.classList.add("hidden");
+      
+        // Disable misinfo generator buttons while on Test page
+        const genButtons = document.querySelectorAll(".gen-btn") as NodeListOf<HTMLButtonElement>;
+        if (screen === testScreen) {
+            genButtons.forEach(btn => btn.disabled = true);
+        } else {
+            genButtons.forEach(btn => btn.disabled = false);
+        }
+      
+        // Show selected screen
+        screen.classList.remove("hidden");
+      }
+      
   
     homeBtn.addEventListener("click", () => showScreen(homeScreen));
     learnBtn.addEventListener("click", () => showScreen(learnScreen));
@@ -60,5 +73,6 @@ window.onload = () => {
     setupNavigation();
     setupMisinfoButtons();
     setupLearnPage();
+    setupTestPage();
 };
 
