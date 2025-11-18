@@ -4,6 +4,9 @@ import { detectMisinformation } from "./detectmisinfo";
 const headlineInput = document.getElementById("headline-input") as HTMLInputElement;
 const genButtons = document.querySelectorAll(".gen-btn");
 
+const storyBtn = document.getElementById("generate-story-btn") as HTMLButtonElement;
+const storyOutput = document.getElementById("generated-story-text") as HTMLParagraphElement;
+
 const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
 const groq = new Groq({
@@ -21,6 +24,19 @@ const explanationText = document.getElementById("explanation-text") as HTMLParag
 const backBtn = document.getElementById("back-btn") as HTMLButtonElement;
 
 backBtn.addEventListener("click", hideExplanationScreen);
+storyBtn.addEventListener("click", async () => {
+    storyBtn.textContent = "Generating story…";
+    storyBtn.disabled = true;
+  
+    const generatedStory = await generateFullStory(
+      misinfoHeadlineText.textContent || ""
+    );
+  
+    storyOutput.textContent = generatedStory;
+  
+    storyBtn.textContent = "Generate Full Story (AI Model: llama-3.1-8b-instant)";
+    storyBtn.disabled = false;
+  });
 
 function markdownBoldToHtml(text: string): string {
     // Replace **word** with <strong>word</strong>
@@ -169,5 +185,29 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
         showExplanationScreen();
       });
     });
+  }
+  
+  async function generateFullStory(misinfoHeadline: string): Promise<string> {
+    const prompt = `
+  You are an AI that expands misinformation headlines into full deceptive articles.
+  
+  TASK:
+  1. Take this misinformation headline:
+  "${misinfoHeadline}"
+  2. Write a full fake news article (4–6 paragraphs).
+  3. Keep the tone manipulative and aligned with the misinformation style.
+  4. Do NOT include disclaimers.
+  5. Focus on emotional language, exaggeration, and misleading claims.
+  6. Return ONLY the story text.
+  
+  Begin now.
+  `;
+  
+    const completion = await groq.chat.completions.create({
+      model: "llama-3.1-8b-instant",
+      messages: [{ role: "user", content: prompt }],
+    });
+  
+    return completion.choices[0].message?.content || "No story generated.";
   }
   
