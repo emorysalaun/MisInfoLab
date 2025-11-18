@@ -1,5 +1,4 @@
 import { setupMisinfoButtons } from "./misinfoify";
-setupMisinfoButtons();
 
 const randomBtn = document.querySelector(".top-btn") as HTMLButtonElement;
 const headlineInput = document.getElementById("headline-input") as HTMLInputElement;
@@ -31,3 +30,36 @@ randomBtn.addEventListener("click", async () => {
         headlineInput.placeholder = "Error fetching news";
     }
 });
+
+export function setupNavigation() {
+    const homeBtn = document.querySelector('[data-page="home"]') as HTMLButtonElement;
+    const learnBtn = document.querySelector('[data-page="learn"]') as HTMLButtonElement;
+    const testBtn  = document.querySelector('[data-page="test"]') as HTMLButtonElement;
+  
+    const homeScreen  = document.querySelector('.generator-container') as HTMLDivElement;
+    const learnScreen = document.getElementById('learn-screen') as HTMLDivElement;
+    const testScreen  = document.getElementById('test-screen') as HTMLDivElement;
+    const explanationScreen = document.getElementById("explanation-screen") as HTMLDivElement;
+  
+    function showScreen(screen: HTMLElement) {
+      homeScreen.classList.add("hidden");
+      learnScreen.classList.add("hidden");
+      testScreen.classList.add("hidden");
+      explanationScreen.classList.add("hidden");
+  
+      screen.classList.remove("hidden");
+    }
+  
+    homeBtn.addEventListener("click", () => showScreen(homeScreen));
+    learnBtn.addEventListener("click", () => showScreen(learnScreen));
+    testBtn.addEventListener("click", () => showScreen(testScreen));
+  }
+
+
+
+
+window.onload = () => {
+    setupNavigation();
+    setupMisinfoButtons();
+};
+
