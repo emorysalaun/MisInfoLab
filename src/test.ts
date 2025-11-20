@@ -10,6 +10,9 @@ interface Question {
   explanation: string;
 }
 
+// Model used for generating test questions
+const TEST_MODEL = "llama-3.1-8b-instant";
+
 let questions: Question[] = [];
 let currentIndex = 0;
 let score = 0;
@@ -23,17 +26,35 @@ export async function setupTestPage() {
   const resultScreen = document.getElementById("test-results") as HTMLDivElement;
   const scoreEl = document.getElementById("test-score") as HTMLParagraphElement;
   const restartBtn = document.getElementById("restart-test-btn") as HTMLButtonElement;
+  const testModelName = document.getElementById("test-model-name") as HTMLElement;
+  
+  // Display the model name used for generating questions
+  if (testModelName) {
+    testModelName.textContent = TEST_MODEL;
+  }
 
   // Start test
   startBtn.addEventListener("click", async () => {
-    startBtn.classList.add("hidden");
-    resultScreen.classList.add("hidden");
-    questionBox.classList.remove("hidden");
-
+    startBtn.textContent = "Generating questions…";
+    startBtn.disabled = true;
+    
     score = 0;
     currentIndex = 0;
 
     questions = await generateQuestions();
+    
+    if (!questions || questions.length === 0) {
+      // Show error message
+      alert("Failed to generate questions. Please try again.");
+      startBtn.textContent = "Start Test";
+      startBtn.disabled = false;
+      return;
+    }
+    
+    startBtn.classList.add("hidden");
+    resultScreen.classList.add("hidden");
+    questionBox.classList.remove("hidden");
+    
     showQuestion();
   });
 
@@ -50,11 +71,20 @@ export async function setupTestPage() {
   restartBtn.addEventListener("click", () => {
     resultScreen.classList.add("hidden");
     startBtn.classList.remove("hidden");
+    // Reset start button state
+    startBtn.textContent = "Start Test";
+    startBtn.disabled = false;
   });
 
   function showQuestion() {
     nextBtn.classList.add("hidden");
     const q = questions[currentIndex];
+
+    if (!q) {
+      console.error("Question is undefined at index:", currentIndex);
+      alert("Error: Question not found. Please restart the test.");
+      return;
+    }
 
     headlineEl.textContent = q.headline;
     choicesEl.innerHTML = "";
@@ -167,23 +197,67 @@ async function generateQuestions(): Promise<Question[]> {
 
     
   const result = await groq.chat.completions.create({
-    model: "llama-3.1-8b-instant",
+    model: TEST_MODEL,
     messages: [{ role: "user", content: prompt }],
   });
 
   let raw = result.choices[0].message?.content || "";
 
-  // Remove extra non-JSON text
-  const startIndex = raw.indexOf("[");
-  const endIndex = raw.lastIndexOf("]");
+  // Handle cases where the model wraps JSON in markdown code blocks or adds extra text
+  let jsonText = raw.trim();
+  
+  // Remove markdown code blocks if present
+  if (jsonText.startsWith("```")) {
+    // Remove opening ```json or ```
+    jsonText = jsonText.replace(/^```(?:json)?\s*\n?/i, "");
+    // Remove closing ```
+    jsonText = jsonText.replace(/\n?```\s*$/, "");
+    jsonText = jsonText.trim();
+  }
+  
+  // Remove extra non-JSON text by finding the JSON array
+  const startIndex = jsonText.indexOf("[");
+  const endIndex = jsonText.lastIndexOf("]");
   if (startIndex !== -1 && endIndex !== -1) {
-    raw = raw.substring(startIndex, endIndex + 1);
+    jsonText = jsonText.substring(startIndex, endIndex + 1);
+  }
+  
+  // Remove trailing commas before closing brackets/braces (common LLM mistake)
+  // Apply multiple times to catch nested trailing commas
+  let previousText = "";
+  while (previousText !== jsonText) {
+    previousText = jsonText;
+    // Remove trailing commas before closing brackets/braces
+    jsonText = jsonText.replace(/,(\s*[}\]])/g, "$1");
   }
 
   try {
-    return JSON.parse(raw);
+    const parsed = JSON.parse(jsonText);
+    // Validate that we got an array
+    if (Array.isArray(parsed) && parsed.length > 0) {
+      // Validate that each question has required fields
+      const validQuestions = parsed.filter((q: any) => 
+        q && 
+        typeof q.headline === 'string' && 
+        q.choices && 
+        typeof q.correct_answer === 'string' &&
+        typeof q.explanation === 'string'
+      );
+      
+      if (validQuestions.length > 0) {
+        return validQuestions;
+      } else {
+        console.error("No valid questions found in parsed array");
+        return [];
+      }
+    } else {
+      console.error("Parsed result is not a valid array or is empty");
+      return [];
+    }
   } catch (err) {
-    console.error("Bad JSON from Groq:", raw);
+    console.error("Bad JSON from Groq. Raw response:", raw);
+    console.error("Cleaned JSON text:", jsonText);
+    console.error("Parse error:", err);
     return [];
   }
 }

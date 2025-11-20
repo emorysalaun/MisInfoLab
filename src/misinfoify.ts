@@ -23,18 +23,69 @@ const explanationText = document.getElementById("explanation-text") as HTMLParag
 
 const backBtn = document.getElementById("back-btn") as HTMLButtonElement;
 
+// Model selector elements
+const modelSelector = document.getElementById("model-selector") as HTMLSelectElement;
+const headlineModelName = document.getElementById("headline-model-name") as HTMLElement;
+const explanationModelName = document.getElementById("explanation-model-name") as HTMLElement;
+const storyModelName = document.getElementById("story-model-name") as HTMLElement;
+
+// Model configuration with display names
+const MODEL_DISPLAY_NAMES: Record<string, string> = {
+  "llama-3.1-8b-instant": "llama-3.1-8b-instant",
+  "llama-3.3-70b-versatile": "llama-3.3-70b-versatile",
+  "openai/gpt-oss-20b": "gpt-oss-20b",
+  "openai/gpt-oss-120b": "gpt-oss-120b"
+};
+
+// Get the currently selected model
+function getSelectedModel(): string {
+  return modelSelector?.value || "llama-3.1-8b-instant";
+}
+
+// Update model name displays in the UI
+function updateModelNameDisplays(model: string): void {
+  const displayName = MODEL_DISPLAY_NAMES[model] || model;
+  if (headlineModelName) headlineModelName.textContent = displayName;
+  if (explanationModelName) explanationModelName.textContent = displayName;
+  if (storyModelName) storyModelName.textContent = displayName;
+  
+  // Update the button text
+  if (storyBtn) {
+    storyBtn.innerHTML = `Generate Full Story (AI Model: <span id="story-model-name">${displayName}</span>)`;
+    // Re-select the element after innerHTML update
+    const updatedStoryModelName = document.getElementById("story-model-name");
+    if (updatedStoryModelName) {
+      // Store reference for future updates
+      (window as any).storyModelNameElement = updatedStoryModelName;
+    }
+  }
+}
+
 backBtn.addEventListener("click", hideExplanationScreen);
+
+// Listen for model selector changes
+if (modelSelector) {
+  modelSelector.addEventListener("change", () => {
+    updateModelNameDisplays(getSelectedModel());
+  });
+  // Initialize model name displays
+  updateModelNameDisplays(getSelectedModel());
+}
+
 storyBtn.addEventListener("click", async () => {
+    const selectedModel = getSelectedModel();
     storyBtn.textContent = "Generating story…";
     storyBtn.disabled = true;
   
     const generatedStory = await generateFullStory(
-      misinfoHeadlineText.textContent || ""
+      misinfoHeadlineText.textContent || "",
+      selectedModel
     );
   
     storyOutput.textContent = generatedStory;
   
-    storyBtn.textContent = "Generate Full Story (AI Model: llama-3.1-8b-instant)";
+    const displayName = MODEL_DISPLAY_NAMES[selectedModel] || selectedModel;
+    storyBtn.innerHTML = `Generate Full Story (AI Model: <span id="story-model-name">${displayName}</span>)`;
     storyBtn.disabled = false;
   });
 
@@ -54,8 +105,9 @@ function showExplanationScreen() {
   }
   
 
-async function applyGroqTransformation(mode: string, text: string): Promise<{ headline: string; explanation: string }> {
+async function applyGroqTransformation(mode: string, text: string, model?: string): Promise<{ headline: string; explanation: string }> {
     try {
+        const selectedModel = model || getSelectedModel();
         const prompt = `
         You are an AI that rewrites headlines to demonstrate misinformation techniques.
         
@@ -90,7 +142,7 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
 
         IMPORTANT STYLE CORRECTION:
         - If mode is NOT "Clickbait", avoid using clickbait-style exaggeration such as:
-        "shocking", "devastating", "explosive", "you won’t believe", "stuns", "panic", "outrage", "urgent warning".
+        "shocking", "devastating", "explosive", "you won't believe", "stuns", "panic", "outrage", "urgent warning".
         - Keep the manipulation focused STRICTLY on the selected technique.
         - For Political Bias: use partisan framing, *not* dramatic stakes.
         - For Fake Facts: invent authoritative-sounding details, *not* exaggerated danger.
@@ -104,20 +156,77 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
           "explanation": "SHORT EXPLANATION OF WHY THIS REPRESENTS '${mode}' MISINFORMATION"
         }
         
+        CRITICAL: Return ONLY valid JSON. Do NOT include any markdown formatting, code blocks, explanations, or text outside the JSON object. Start with { and end with }.
+        
         Original Headline:
         "${text}"
         `;
 
   
       const completion = await groq.chat.completions.create({
-        model: "llama-3.1-8b-instant",
+        model: selectedModel,
         messages: [{ role: "user", content: prompt }]
       });
-  
+
       const raw = completion.choices[0].message?.content || "";
-  
+
       // Parse the JSON the model outputs
-      return JSON.parse(raw);
+      // Handle cases where the model wraps JSON in markdown code blocks or adds extra text
+      let jsonText = raw.trim();
+      
+      // Remove markdown code blocks if present
+      if (jsonText.startsWith("```")) {
+        // Remove opening ```json or ```
+        jsonText = jsonText.replace(/^```(?:json)?\s*\n?/i, "");
+        // Remove closing ```
+        jsonText = jsonText.replace(/\n?```\s*$/, "");
+        jsonText = jsonText.trim();
+      }
+      
+      // Find the JSON object in the text (handle cases where there's text before/after)
+      // Try to match the outermost JSON object
+      let jsonMatch = jsonText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        jsonText = jsonMatch[0];
+      } else {
+        // If no match, try to find JSON array (less likely but possible)
+        jsonMatch = jsonText.match(/\[[\s\S]*\]/);
+        if (jsonMatch) {
+          jsonText = jsonMatch[0];
+        }
+      }
+      
+      // Remove trailing commas before closing braces/brackets (common LLM mistake)
+      jsonText = jsonText.replace(/,(\s*[}\]])/g, "$1");
+      
+      // Try to parse
+      try {
+        const parsed = JSON.parse(jsonText);
+        // Validate that we have the required fields
+        if (typeof parsed.headline === 'string' && typeof parsed.explanation === 'string') {
+          return parsed;
+        } else {
+          throw new Error("JSON missing required fields: headline or explanation");
+        }
+      } catch (parseError) {
+        console.error("Failed to parse JSON. Raw response:", raw);
+        console.error("Cleaned JSON text:", jsonText);
+        console.error("Parse error:", parseError);
+        
+        // Last resort: try to extract fields manually if JSON structure is close
+        const headlineMatch = jsonText.match(/"headline"\s*:\s*"([^"]+)"/);
+        const explanationMatch = jsonText.match(/"explanation"\s*:\s*"([^"]+)"/);
+        
+        if (headlineMatch && explanationMatch) {
+          console.warn("Recovered from malformed JSON by extracting fields manually");
+          return {
+            headline: headlineMatch[1],
+            explanation: explanationMatch[1]
+          };
+        }
+        
+        throw new Error(`JSON parsing failed: ${parseError instanceof Error ? parseError.message : 'Unknown error'}`);
+      }
   
     } catch (err) {
       console.error("Groq error:", err);
@@ -154,23 +263,29 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
   
         headlineInput.value = "Generating…";
   
-        const result = await applyGroqTransformation(mode, originalText);
+        const selectedModel = getSelectedModel();
+        const result = await applyGroqTransformation(mode, originalText, selectedModel);
+        
+        // Update model name displays with the model that was used
+        updateModelNameDisplays(selectedModel);
 
         headlineInput.value = result.headline;
 
         const detection = await detectMisinformation(result.headline);
         const detectionBox = document.getElementById("detection-results");
-        detectionBox.innerHTML = `
+        if (detectionBox) {
+          detectionBox.innerHTML = `
             <h3>AI Detection (Model: <code>openai/gpt-oss-120b</code>)</h3>
             <p><strong>Misinformation Score:</strong> ${detection.misinformation_score}</p>
             <p><strong>Emotional Triggering:</strong> ${detection.emotional_triggering}</p>
             <p><strong>Fake Facts:</strong> ${detection.fake_facts}</p>
             <p><strong>Clickbait:</strong> ${detection.clickbait}</p>
             <p><strong>Political Bias:</strong> ${detection.political_bias}</p>
-            <p><strong>Manipulative Phrases:</strong> ${detection.manipulative_phrases.join(", ")}</p>
-            <p><strong>Psychological Triggers:</strong> ${detection.psychological_triggers.join(", ")}</p>
-            <p><strong>Analysis:</strong> ${detection.reasoning}</p>
+            <p><strong>Manipulative Phrases:</strong> ${detection.manipulative_phrases?.join(", ") || "None detected"}</p>
+            <p><strong>Psychological Triggers:</strong> ${detection.psychological_triggers?.join(", ") || "None detected"}</p>
+            <p><strong>Analysis:</strong> ${detection.reasoning || "No analysis available"}</p>
             `;
+        }
   
        //left box with original headline
         originalHeadlineText.textContent = markdownBoldToHtml(originalText);
@@ -187,7 +302,8 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
     });
   }
   
-  async function generateFullStory(misinfoHeadline: string): Promise<string> {
+  async function generateFullStory(misinfoHeadline: string, model?: string): Promise<string> {
+    const selectedModel = model || getSelectedModel();
     const prompt = `
   You are an AI that expands misinformation headlines into full deceptive articles.
   
@@ -204,7 +320,7 @@ async function applyGroqTransformation(mode: string, text: string): Promise<{ he
   `;
   
     const completion = await groq.chat.completions.create({
-      model: "llama-3.1-8b-instant",
+      model: selectedModel,
       messages: [{ role: "user", content: prompt }],
     });
   

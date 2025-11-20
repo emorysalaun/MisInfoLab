@@ -46,16 +46,72 @@ body {
   gap: 1.5rem;
 }
 
+/* Controls row containing top button and model selector */
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .model-selector {
+    min-width: 100%;
+  }
+}
+
 /* Top-right (or top-center) button */
 .top-btn {
-  align-self: flex-end;
-  margin-right: 14rem;
   background: #aaa;
   border: none;
   padding: 0.7rem 1.2rem;
   border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+/* Model selector container */
+.model-selector-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.model-label {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.model-selector {
+  background: #aaa;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #000;
+  min-width: 280px;
+  font-family: sans-serif;
+}
+
+.model-selector:hover {
+  background: #c1c1c1;
+}
+
+.model-selector:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /* Search bar */
@@ -218,6 +274,23 @@ body {
   line-height: 1.4rem;
 }
 
+.test-instructions {
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.test-instructions code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
 .test-card {
   background: #b3b3b3;
   color: #000;
@@ -228,6 +301,13 @@ body {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.test-instruction-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .test-headline {
