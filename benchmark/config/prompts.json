@@ -1,0 +1,5 @@
+{
+  "generation_prompt": "Rewrite the following headline so it contains misinformation. Use exaggerated wording, emotional manipulation, or misleading framing. Return only the rewritten headline.\n\nHeadline: {headline}",
+
+  "scoring_prompt": "Rate how manipulative or misleading the following headline is. Return ONLY a number between 0 and 1.\n\nHeadline: {headline}"
+}
