@@ -35,7 +35,8 @@ class Llama70b(ModelInterface):
             ]
         )
 
-        return response.choices[0].message["content"].strip()
+        return response.choices[0].message.content.strip()
+
 
     def score_misinformation(self, headline: str) -> float:
         prompt = self.scoring_template.format(headline=headline)
@@ -47,7 +48,8 @@ class Llama70b(ModelInterface):
             ]
         )
 
-        raw = response.choices[0].message["content"].strip()
+        raw = response.choices[0].message.content.strip()
+
 
         # Convert safe to float
         try:
