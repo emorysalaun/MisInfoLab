@@ -2,7 +2,7 @@ import os
 from llama_cpp import Llama
 from models.model_interface import ModelInterface
 from config.prompt_loader import load_prompts
-
+import re
 
 class LocalMistral7B(ModelInterface):
     """
@@ -45,10 +45,15 @@ class LocalMistral7B(ModelInterface):
 
     def score_misinformation(self, headline):
         prompt = self.scoring_template.format(headline=headline)
-        raw = self._generate(prompt, max_tokens=10)
+        raw = self._generate(prompt, max_tokens=20)
 
-        try:
-            score = float(raw)
-            return max(0.0, min(1.0, score))
-        except:
+        if not isinstance(raw, str):
             return 0.0
+
+        # extract first number between 0 and 1
+        match = re.search(r"0\.\d+|1\.0|1", raw)
+        if match:
+            value = float(match.group())
+            return max(0.0, min(1.0, value))
+
+        return 0.0
