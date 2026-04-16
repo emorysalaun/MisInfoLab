@@ -1,0 +1,702 @@
+[
+    {
+        "id": "/story/conflicting-reports-release-new-cdc-guidelines",
+        "title": "Guidelines drafted by CDC were rejected by Trump administration citing religious freedom, economic concerns",
+        "topic": "Coronavirus",
+        "date": "2020-05-08",
+        "url": "https://thehill.com/homenews/administration/496744-reopening-guidelines-drafted-by-cdc-rejected-by-trump-administration"
+    },
+    {
+        "id": "/story/ash-carter-sworn",
+        "title": "Ashton Carter Is Sworn In As Obama's 4th Defense Secretary",
+        "topic": "White House",
+        "date": "2015-02-17",
+        "url": "http://www.npr.org/blogs/thetwo-way/2015/02/17/386963400/ashton-carter-is-sworn-in-as-obamas-fourth-defense-secretary"
+    },
+    {
+        "id": "/story/politics-montana-house-republicans-censure-trans-lawmaker-over-hate-filled-comments",
+        "title": "Zooey Zephyr Sends Parting Message to Montana Republicans After Censure",
+        "topic": "Politics",
+        "date": "2023-04-27",
+        "url": "https://www.newsweek.com/zooey-zephyr-sends-parting-message-montana-republicans-after-censure-1796934"
+    },
+    {
+        "id": "/story/primary-day-4-states",
+        "title": "Primaries In 4 States Could Impact Battle To Control Congress",
+        "topic": "Elections",
+        "date": "2018-05-15",
+        "url": "https://www.npr.org/2018/05/15/611199690/primaries-in-4-states-could-impact-the-battle-to-control-congress"
+    },
+    {
+        "id": "/story/isis-pure-evil",
+        "title": "U.S. review of Islamic State video confirms American's death",
+        "topic": "Middle East",
+        "date": "2014-11-16",
+        "url": "http://www.usatoday.com/story/news/world/2014/11/16/peter-kassig-islamic-state-claims-beheading-syria/19128067/"
+    },
+    {
+        "id": "/story/117-dead-amid-ongoing-violence-south-africa",
+        "title": "KZN, Gauteng unrest: Death toll rises to 117, over 2 200 arrested",
+        "topic": "World",
+        "date": "2021-07-16",
+        "url": "https://www.thesouthafrican.com/news/kzn-gauteng-unrest-death-toll-rises-to-117-over-2-200-arrested/"
+    },
+    {
+        "id": "/story/fighting-continues-syria-despite-cease-fire",
+        "title": "Fighting Flares in Syria Despite Hours-Old Cease-Fire",
+        "topic": "Middle East",
+        "date": "2019-10-18",
+        "url": "https://www.wsj.com/articles/fighting-flares-in-syria-despite-hours-old-cease-fire-11571390556"
+    },
+    {
+        "id": "/story/democratic-rep-jeff-van-drew-switch-parties",
+        "title": "Ratings change: Van Drew going Republican tilts NJ race to GOP",
+        "topic": "Democratic Party",
+        "date": "2019-12-16",
+        "url": "https://www.rollcall.com/news/ratings-change-van-drew-becoming-republican-tilts-nj-race-gop"
+    },
+    {
+        "id": "/story/de-blasio-enters-2020-presidential-race",
+        "title": "New York Mayor de Blasio becomes 24th Democrat in crowded 2020 White House field",
+        "topic": "Elections",
+        "date": "2019-05-16",
+        "url": "https://www.reuters.com/article/us-usa-election-deblasio/new-york-mayor-de-blasio-becomes-24th-democrat-in-crowded-2020-white-house-field-idUSKCN1SM100"
+    },
+    {
+        "id": "/story/update-cabinet-nominations",
+        "title": "Senate seeks deal on Trump nominees",
+        "topic": "Politics",
+        "date": "2017-01-19",
+        "url": "http://thehill.com/homenews/senate/314992-senate-seeks-deal-on-trump-nominees"
+    },
+    {
+        "id": "/story/trump-defends-mcmaster",
+        "title": "Trump defends McMaster in wake of criticism on the right",
+        "topic": "National Security",
+        "date": "2017-08-05",
+        "url": "http://thehill.com/homenews/administration/345426-trump-defends-mcmaster-in-wake-of-right-wing-criticism"
+    },
+    {
+        "id": "/story/elections-french-leftists-defy-polls-and-deliver-shock-election-result-halting-right-wing",
+        "title": "What just happened in France's shock election?",
+        "topic": "Elections",
+        "date": "2024-07-08",
+        "url": "https://www.bbc.com/news/articles/c724nnn29keo"
+    },
+    {
+        "id": "/story/debate-previews-focus-moderator-kristen-welker-nbc",
+        "title": "The third person on tonight’s debate stage might be the most important. So who is Kristen Welker?",
+        "topic": "Elections",
+        "date": "2020-10-22",
+        "url": "https://www.poynter.org/newsletters/2020/the-third-person-on-tonights-debate-stage-might-be-the-most-important-so-who-is-kristen-welker/"
+    },
+    {
+        "id": "/story/how-public-views-reparations-slavery",
+        "title": "U.S. public more aware of racial inequality but still rejects reparations: Reuters/Ipsos polling",
+        "topic": "Race and Racism",
+        "date": "2020-06-25",
+        "url": "https://www.reuters.com/article/us-usa-economy-reparations-poll/u-s-public-more-aware-of-racial-inequality-but-still-rejects-reparations-reuters-ipsos-polling-idUSKBN23W1NG"
+    },
+    {
+        "id": "/story/politics-house-advances-foreign-aid-bill-unusual-bipartisan-procedural-vote",
+        "title": "House advances Ukraine, Israel aid as Dems help Speaker Johnson, GOP",
+        "topic": "Politics",
+        "date": "2024-04-19",
+        "url": "https://thehill.com/homenews/house/4604948-house-advances-ukraine-israel-aid-as-dems-help-speaker-johnson-gop/"
+    },
+    {
+        "id": "/story/russia-us-accuses-russia-trying-influence-2024-election",
+        "title": "US accuses Russia of 2024 election interference",
+        "topic": "Russia",
+        "date": "2024-09-05",
+        "url": "https://www.bbc.com/news/articles/c8rx28v1vpro"
+    },
+    {
+        "id": "/story/harriss-staff-dissatisfied-dysfunctional-work-environment",
+        "title": "Kamala Harris’ chief of staff, criticized for tough tactics, built reputation while working for Bill Clinton",
+        "topic": "Politics",
+        "date": "2021-07-01",
+        "url": "https://www.cnbc.com/2021/07/01/kamala-harris-chief-of-staff-tina-flournoy-blocked-bill-clinton-aides-allies.html"
+    },
+    {
+        "id": "/story/jk-rowling-faces-backlash-after-stating-sex-real",
+        "title": "J.K. Rowling sparks controversy for transgender comments; GLAAD responds",
+        "topic": "Culture",
+        "date": "2019-12-20",
+        "url": "https://www.usatoday.com/story/entertainment/celebrities/2019/12/19/j-k-rowling-transgender-comments-maya-forstater-glaad-response/2701579001/"
+    },
+    {
+        "id": "/story/joe-biden-did-department-justice-properly-handle-hunter-biden-investigation",
+        "title": "Joe Biden is Weathering the Storm of Hunter's Scandals",
+        "topic": "Joe Biden",
+        "date": "2023-06-29",
+        "url": "https://www.newsweek.com/joe-biden-weathering-storm-hunters-scandals-1809940"
+    },
+    {
+        "id": "/story/donald-trump-trump-calls-tiktok-national-security-threat-opposes-ban",
+        "title": "Trump Says TikTok Ban Could Make Facebook Bigger And Slams Meta As ‘Enemy Of The People’",
+        "topic": "Donald Trump",
+        "date": "2024-03-11",
+        "url": "https://www.forbes.com/sites/maryroeloffs/2024/03/11/trump-says-tiktok-ban-could-make-facebook-bigger-slams-meta-as-enemy-of-the-people/?sh=24affddd2ebf"
+    },
+    {
+        "id": "/story/house-passes-bills-expand-background-checks-gun-sales-schumer-pledges-senate-vote",
+        "title": "House approves bills tightening background checks on guns",
+        "topic": "Gun Control and Gun Rights",
+        "date": "2021-03-11",
+        "url": "https://thehill.com/homenews/house/542704-house-approves-bill-tightening-background-checks-on-guns?rl=1"
+    },
+    {
+        "id": "/story/senate-vote-temporary-spending-bill-prevent-government-shutdown",
+        "title": "Senate Majority Leader Mitch McConnell to offer bill to avoid federal government shutdown",
+        "topic": "US Senate",
+        "date": "2018-12-19",
+        "url": "https://www.usatoday.com/story/news/politics/2018/12/19/government-shutdown-democrats-republicans-look-deal/2336303002/"
+    },
+    {
+        "id": "/story/banking-and-finance-fed-raises-interest-rates-highest-level-2001",
+        "title": "Fed raises interest rates, leaves door open to another increase",
+        "topic": "Banking and Finance",
+        "date": "2023-07-26",
+        "url": "https://www.reuters.com/markets/rates-bonds/fed-poised-hike-rates-markets-anticipate-inflation-endgame-2023-07-26/"
+    },
+    {
+        "id": "/story/joe-biden-pro-palestine-protesters-march-washington-dc-expressing-anger-biden",
+        "title": "Thousands of pro-Palestinian protesters march across DC",
+        "topic": "Joe Biden",
+        "date": "2023-11-05",
+        "url": "https://thehill.com/policy/defense/4293880-thousands-of-pro-palestinian-protesters-march-across-dc/"
+    },
+    {
+        "id": "/story/perspectives-voter-suppression-or-election-integrity",
+        "title": "Two Republicans can stop voter suppression",
+        "topic": "Elections",
+        "date": "2021-03-09",
+        "url": "https://thehill.com/opinion/campaign/541984-two-republicans-can-stop-voter-suppression?rl=1"
+    },
+    {
+        "id": "/story/politics-house-votes-formally-approve-biden-impeachment-inquiry",
+        "title": "House formally approves Biden impeachment inquiry",
+        "topic": "Politics",
+        "date": "2023-12-14",
+        "url": "https://thehill.com/homenews/house/4358911-biden-impeachment-inquiry-house-gop/"
+    },
+    {
+        "id": "/story/business-restaurant-chains-falter-amid-rising-costs-underperformance",
+        "title": "These 10 restaurant chains filed for bankruptcy this year",
+        "topic": "Business",
+        "date": "2024-09-03",
+        "url": "https://www.cnbc.com/2024/09/01/restaurant-chains-that-filed-for-bankruptcy-this-year.html"
+    },
+    {
+        "id": "/story/trumps-name-will-appear-stimulus-checks",
+        "title": "Trump's name to be printed on $1,200 coronavirus stimulus checks going out to Americans",
+        "topic": "Donald Trump",
+        "date": "2020-04-15",
+        "url": "https://www.usatoday.com/story/news/politics/2020/04/15/trumps-name-printed-on-coronavirus-stimulus-checks/5135921002/"
+    },
+    {
+        "id": "/story/2024-presidential-election-will-trump-rally-joke-alienate-puerto-rican-voters-swing-states",
+        "title": "Puerto Ricans in must-win Pennsylvania say Trump rally joke won’t be forgotten",
+        "topic": "2024 Presidential Election",
+        "date": "2024-10-30",
+        "url": "https://www.bbc.com/news/articles/cgj7689v757o"
+    },
+    {
+        "id": "/story/immigration-cbp-reports-27-increase-migrant-encounters-southern-border",
+        "title": "Migrant encounters up 27% in July at southern border: CBP",
+        "topic": "Immigration",
+        "date": "2023-08-22",
+        "url": "https://www.newsnationnow.com/us-news/immigration/border-coverage/migrant-encounters-up-in-july/"
+    },
+    {
+        "id": "/story/bombing-suspects-seen-having-acted-alone",
+        "title": "Early Thinking: Boston Suspects Were Working On Their Own",
+        "topic": "Terrorism",
+        "date": "2013-04-23",
+        "url": "http://www.npr.org/blogs/thetwo-way/2013/04/23/178560685/early-thinking-boston-suspects-were-working-on-their-own"
+    },
+    {
+        "id": "/story/ted-cruz-same-sex-marriage-supreme-court",
+        "title": "Ted Cruz Says SCOTUS 'Clearly Wrong' to Legalize Gay Marriage",
+        "topic": "LGBTQ Issues",
+        "date": "2022-07-18",
+        "url": "https://www.newsweek.com/ted-cruz-says-scotus-clearly-wrong-legalize-gay-marriage-1725304"
+    },
+    {
+        "id": "/story/economy-and-jobs-annual-inflation-rose-37-september",
+        "title": "Inflation Stable in September, Underlying Price Gains Stay Modest",
+        "topic": "Economy and Jobs",
+        "date": "2023-10-12",
+        "url": "https://www.wsj.com/economy/central-banking/cpi-report-september-mild-inflation-862679f7?mod=hp_lead_pos1"
+    },
+    {
+        "id": "/story/house-passes-14-trillion-spending-bill",
+        "title": "House approves spending deal that would avert government shutdown, raise tobacco age, research gun violence",
+        "topic": "Federal Budget",
+        "date": "2019-12-17",
+        "url": "https://www.usatoday.com/story/news/politics/2019/12/17/house-vote-spending-deal-avert-shutdown-raise-tobacco-age/2667869001/"
+    },
+    {
+        "id": "/story/new-zealand-prime-minister-announces-ban-semi-automatic-weapons-after-deadly-attack",
+        "title": "New Zealand bans military-style assault rifles after deadliest attack in nation's history",
+        "topic": "Gun Control and Gun Rights",
+        "date": "2019-03-20",
+        "url": "https://www.usatoday.com/story/news/nation/2019/03/20/new-zealand-bans-military-assault-rifles-after-massacre/3230544002/"
+    },
+    {
+        "id": "/story/middle-east-israel-agrees-ceasefire-proposal-hamas-takes-issue-new-conditions",
+        "title": "Hamas Says It Accepts Biden Ceasefire Deal Without 'New' Israel Conditions",
+        "topic": "Middle East",
+        "date": "2024-08-20",
+        "url": "https://www.newsweek.com/hamas-says-it-accepts-biden-ceasefire-deal-without-new-israel-conditions-1941556"
+    },
+    {
+        "id": "/story/china-china-signals-tentative-approval-tesla-s-self-driving-cars",
+        "title": "Tesla Comes A Step Closer To Self-Driving Approval In China After Deal With Baidu",
+        "topic": "China",
+        "date": "2024-04-29",
+        "url": "https://www.forbes.com/sites/siladityaray/2024/04/29/tesla-and-baidu-reportedly-agree-to-map-deal-as-elon-musk-seeks-self-driving-approval-in-china/"
+    },
+    {
+        "id": "/story/storm-harvey-threatens-louisiana",
+        "title": "Houston reels as Storm Harvey bears down on Louisiana",
+        "topic": "Disaster",
+        "date": "2017-08-30",
+        "url": "http://www.bbc.com/news/world-us-canada-41096565"
+    },
+    {
+        "id": "/story/shooting-chattanooga",
+        "title": "Shootings In Chattanooga: What We Know About The Alleged Gunman",
+        "topic": "Violence in America",
+        "date": "2015-07-17",
+        "url": "http://www.npr.org/sections/thetwo-way/2015/07/17/423746603/shootings-in-chattanooga-what-we-know-about-the-alleged-gunman"
+    },
+    {
+        "id": "/story/compromise-farm-bill",
+        "title": "House Passes Compromise Farm Bill",
+        "topic": "US House",
+        "date": "2014-01-29",
+        "url": "http://www.npr.org/blogs/thetwo-way/2014/01/29/268238623/house-passes-compromise-farm-bill"
+    },
+    {
+        "id": "/story/middle-east-trump-says-us-could-take-over-gaza-make-home-worlds-people",
+        "title": "Trump floats US taking over Gaza Strip",
+        "topic": "Middle East",
+        "date": "2025-02-05",
+        "url": "https://thehill.com/policy/international/5127021-trump-us-takeover-gaza/"
+    },
+    {
+        "id": "/story/questions-surface-about-white-house-awareness-russia-taliban-bounty-plot",
+        "title": "AP sources: White House aware of Russian bounties in 2019",
+        "topic": "National Security",
+        "date": "2020-06-30",
+        "url": "https://apnews.com/fcf3ec359401c7575f5402b4da9b00a3"
+    },
+    {
+        "id": "/story/facts-and-fact-checking-government-trying-ban-gas-stoves",
+        "title": "Yes, Chefs, The Government Is Coming For Your Gas Stoves",
+        "topic": "Facts and Fact Checking",
+        "date": "2023-01-31",
+        "url": "https://www.forbes.com/sites/davidblackmon/2023/01/29/yes-chefs-the-government-is-coming-for-your-gas-stoves/?sh=3230bd4b13ae"
+    },
+    {
+        "id": "/story/next-debates",
+        "title": "Presidential Debates Can Be Great Theater, But How Much Do They Matter?",
+        "topic": "Elections",
+        "date": "2012-09-16",
+        "url": "http://www.npr.org/blogs/itsallpolitics/2012/09/16/161139332/presidential-debates-can-be-great-theater-but-how-much-do-they-matter"
+    },
+    {
+        "id": "/story/trump-attorney-michael-cohen-being-investigated",
+        "title": "Trump Blasts 'Total Witch Hunt' After FBI Raids His Longtime Attorney's Office",
+        "topic": "FBI",
+        "date": "2018-04-10",
+        "url": "https://www.npr.org/2018/04/09/600942396/fbi-raids-office-of-trump-attorney-michael-cohen"
+    },
+    {
+        "id": "/story/officials-end-search-survivors-florida-condo-collapse",
+        "title": "At least 60 people dead in Florida condo collapse, 80 missing with hope for survivors ‘near zero’",
+        "topic": "General News",
+        "date": "2021-07-08",
+        "url": "https://www.cnbc.com/2021/07/08/florida-condo-collapse-60-dead-80-missing-hope-for-survivors-near-zero.html"
+    },
+    {
+        "id": "/story/business-boeing-whistleblowers-testify-senate-committee-over-recent-incidents",
+        "title": "Boeing Whistleblower Speaks Out About 'Cover-Up' of Plane Incident",
+        "topic": "Business",
+        "date": "2024-04-17",
+        "url": "https://www.newsweek.com/boeing-whistleblower-speaks-out-senate-cover-plane-incident-door-plug-1891370"
+    },
+    {
+        "id": "/story/supreme-court-was-supreme-court-right-overturn-bump-stock-ban",
+        "title": "Supreme Court bump stock decision hurls gun rights back into spotlight",
+        "topic": "Supreme Court",
+        "date": "2024-06-14",
+        "url": "https://thehill.com/regulation/court-battles/4722871-supreme-court-bump-stocks-gun-rights/"
+    },
+    {
+        "id": "/story/fate-gorsuch-nomination",
+        "title": "Senate panel to vote on Supreme Court nominee Neil Gorsuch",
+        "topic": "US Senate",
+        "date": "2017-04-02",
+        "url": "http://www.nbcnews.com/politics/politics-news/sen-schumer-says-it-s-unlikely-gorsuch-will-reach-60-n741736"
+    },
+    {
+        "id": "/story/perspectives-should-vaccinated-people-mask-again",
+        "title": "No, you’re not crazy. Yes, the CDC’s mask guidelines are confusing — should you wear a mask indoors even if you’re vaccinated?",
+        "topic": "Coronavirus",
+        "date": "2021-07-28",
+        "url": "https://www.marketwatch.com/story/no-youre-not-crazy-yes-cdc-mask-guidelines-are-confusing-and-they-have-been-from-the-start-2021-05-14"
+    },
+    {
+        "id": "/story/business-why-southwest-canceling-thousands-more-flights-other-airlines",
+        "title": "Should Southwest Airlines reconsider its point-to-point route system?",
+        "topic": "Business",
+        "date": "2022-12-29",
+        "url": "https://www.dallasnews.com/business/airlines/2022/12/28/should-southwest-airlines-reconsider-its-point-to-point-route-system/"
+    },
+    {
+        "id": "/story/cdc-panel-recommends-resuming-johnson-johnson-vaccine-distribution",
+        "title": "CDC panel recommends U.S. resume use of J&J Covid vaccine, saying benefits outweigh risks",
+        "topic": "Coronavirus",
+        "date": "2021-04-23",
+        "url": "https://www.cnbc.com/2021/04/23/jj-covid-vaccine-cdc-panel-recommends-resuming-use-of-jj-vaccine-.html"
+    },
+    {
+        "id": "/story/obamacare-likely-safe-supreme-court-case",
+        "title": "Supreme Court appears willing to leave Obamacare in place",
+        "topic": "Supreme Court",
+        "date": "2020-11-10",
+        "url": "https://www.cnbc.com/2020/11/10/supreme-court-appears-willing-to-leave-obamacare-in-place-.html"
+    },
+    {
+        "id": "/story/americas-google-maps-changes-names-geographical-features-after-trumps-order",
+        "title": "US Google Maps Users to See 'Gulf of America' Instead of 'Gulf of Mexico'",
+        "topic": "The Americas",
+        "date": "2025-01-28",
+        "url": "https://www.newsweek.com/google-maps-gulf-mexico-america-name-change-donald-trump-2021853"
+    },
+    {
+        "id": "/story/2024-presidential-election-joe-rogan-rejects-harris-campaign-s-interview-demands-hopes-chat",
+        "title": "Joe Rogan says a Kamala Harris interview isn’t off the table even though he rejected her conditions, including traveling to meet her",
+        "topic": "2024 Presidential Election",
+        "date": "2024-10-30",
+        "url": "https://fortune.com/2024/10/30/joe-rogan-kamala-harris-donald-trump-jre-podcast/"
+    },
+    {
+        "id": "/story/politics-mitch-mcconnell-freezes-while-addressing-reporters-mirroring-july-incident",
+        "title": "Mitch McConnell freezes, struggles to speak in second incident this summer",
+        "topic": "Politics",
+        "date": "2023-08-30",
+        "url": "https://www.cnbc.com/2023/08/30/mitch-mcconnell-freezes-struggles-to-speak-in-second-incident-this-summer.html"
+    },
+    {
+        "id": "/story/sustainability-france-bans-some-short-distance-flights-move-cut-emissions",
+        "title": "France bans short-haul flights to cut carbon emissions",
+        "topic": "Sustainability",
+        "date": "2023-05-24",
+        "url": "https://www.bbc.com/news/world-europe-65687665"
+    },
+    {
+        "id": "/story/tactics-delay-sequester",
+        "title": "Obama Calls For Small Package Of Cuts, Tax Changes To Head Off 'Sequester'",
+        "topic": "Federal Budget",
+        "date": "2013-02-05",
+        "url": "http://www.npr.org/blogs/thetwo-way/2013/02/05/171158110/obama-to-call-for-small-package-of-cuts-tax-changes-to-head-off-sequester"
+    },
+    {
+        "id": "/story/impeachment-trial-could-bog-down-bidens-first-days",
+        "title": "Bitter Senate impeachment trial of Trump could bog down Biden's first days",
+        "topic": "Politics",
+        "date": "2021-01-14",
+        "url": "https://www.reuters.com/article/us-usa-trump/bitter-senate-impeachment-trial-of-trump-could-bog-down-bidens-first-days-idUSKBN29J1B6"
+    },
+    {
+        "id": "/story/coronavirus-us-revives-covid-19-test-requirement-travelers-china",
+        "title": "U.S. will require airline passengers traveling from China to test negative for Covid",
+        "topic": "Coronavirus",
+        "date": "2022-12-28",
+        "url": "https://www.cnbc.com/2022/12/28/us-will-require-airline-passengers-traveling-from-china-to-test-negative-for-covid-.html"
+    },
+    {
+        "id": "/story/us-taiwan-agree-talks-new-trade-deal-amid-china-tensions",
+        "title": "U.S., Taiwan to start formal trade talks under new initiative",
+        "topic": "Trade",
+        "date": "2022-08-18",
+        "url": "https://www.reuters.com/world/us-taiwan-start-formal-trade-talks-under-new-initiative-2022-08-18/"
+    },
+    {
+        "id": "/story/world-jk-rowling-challenges-new-scottish-hate-crime-law-dares-police-arrest-her",
+        "title": "PM backs JK Rowling's views on new hate crime law",
+        "topic": "World",
+        "date": "2024-04-04",
+        "url": "https://www.bbc.com/news/articles/cmmqq4qv81qo"
+    },
+    {
+        "id": "/story/more-200-lawmakers-call-trumps-removal-or-impeachment",
+        "title": "Explainer: Trump is heading for second impeachment. Here's how it could play out",
+        "topic": "Politics",
+        "date": "2021-01-08",
+        "url": "https://cn.reuters.com/article/us-usa-election-impeachment-explainer/explainer-trump-is-heading-for-second-impeachment-heres-how-it-could-play-out-idUSKBN29D2QG"
+    },
+    {
+        "id": "/story/nikki-haley-un-secretary",
+        "title": "5 things to know about Trump's U.N. pick: S.C. Gov. Nikki Haley",
+        "topic": "Foreign Policy",
+        "date": "2016-11-23",
+        "url": "http://www.usatoday.com/story/news/politics/onpolitics/2016/11/23/5-things-know-trumps-united-nations-pick-sc-gov-nikki-haley/94333682/"
+    },
+    {
+        "id": "/story/middle-east-israel-suffers-highest-single-day-death-toll-october-7",
+        "title": "In deadliest incident of Gaza combat, 21 soldiers killed as buildings collapse in blast",
+        "topic": "Middle East",
+        "date": "2024-01-23",
+        "url": "https://www.timesofisrael.com/in-deadliest-incident-of-gaza-combat-21-soldiers-killed-as-buildings-collapse-in-blast/"
+    },
+    {
+        "id": "/story/economy-and-jobs-will-us-economy-see-soft-landing-or-recession-2024",
+        "title": "Wall Street’s last recession holdouts",
+        "topic": "Economy and Jobs",
+        "date": "2023-12-15",
+        "url": "https://www.ft.com/content/85049bb2-c18d-4beb-8aea-4b867c2a5851"
+    },
+    {
+        "id": "/story/outgoing-governor-matt-bevin-pardons-violent-criminals-his-last-day",
+        "title": "On His Way Out, Kentucky Gov. Matt Bevin Pardons Murderers, Rapists, Hundreds More",
+        "topic": "Criminal Justice",
+        "date": "2019-12-13",
+        "url": "https://www.npr.org/2019/12/13/787811560/on-his-way-out-kentucky-gov-matt-bevin-pardons-murderers-rapists-hundreds-more"
+    },
+    {
+        "id": "/story/technology-chatgpt-creator-openai-turmoil-ceo-leaves-takes-job-microsoft",
+        "title": "OpenAI Investors Keep Pushing for Sam Altman’s Return",
+        "topic": "Technology",
+        "date": "2023-11-20",
+        "url": "https://www.wsj.com/tech/openai-employees-threaten-to-quit-unless-board-resigns-bbd5cc86"
+    },
+    {
+        "id": "/story/wisconsin-primary-battle-looms",
+        "title": "Wisconsin, Long The Front-Runner's Friend, Looks To Play Spoiler On Tuesday",
+        "topic": "Elections",
+        "date": "2016-04-04",
+        "url": "http://www.npr.org/2016/04/04/472916072/wisconsin-long-the-front-runners-friend-looks-to-play-spoiler-on-tuesday"
+    },
+    {
+        "id": "/story/china-xi-says-taiwan-will-surely-be-reunified-china-ahead-elections",
+        "title": "China's Xi says 'reunification' with Taiwan is inevitable",
+        "topic": "China",
+        "date": "2024-01-02",
+        "url": "https://www.reuters.com/world/asia-pacific/china-calls-taiwan-president-frontrunner-destroyer-peace-2023-12-31/"
+    },
+    {
+        "id": "/story/shulkin-replaced-veterans-affairs",
+        "title": "David Shulkin: Sacked secretary in parting shot at Trump",
+        "topic": "Veterans Affairs",
+        "date": "2018-03-29",
+        "url": "http://www.bbc.com/news/world-us-canada-43574256"
+    },
+    {
+        "id": "/story/healthcare-will-harris-plan-cap-prescription-drug-costs-work",
+        "title": "Kamala Harris' plan to keep prescription drug prices down includes a $2,000 cap on out-of-pocket costs",
+        "topic": "Healthcare",
+        "date": "2024-08-20",
+        "url": "https://qz.com/kamala-harris-prescription-drugs-1851624050"
+    },
+    {
+        "id": "/story/senators-introduce-bipartisan-immigration-bill",
+        "title": "2 senators offer bipartisan bill protecting young immigrants, but Trump quickly rejects it",
+        "topic": "Immigration",
+        "date": "2018-02-05",
+        "url": "https://www.pbs.org/newshour/politics/2-senators-offer-new-bipartisan-bill-protecting-young-immigrants"
+    },
+    {
+        "id": "/story/milwaukee-urges-residents-stop-vaping",
+        "title": "Milwaukee urges people to stop vaping immediately amid lung disease outbreak",
+        "topic": "Marijuana Legalization",
+        "date": "2019-08-29",
+        "url": "https://www.usatoday.com/story/news/nation/2019/08/28/vaping-alert-stop-using-e-cigarettes-milwaukee-health-officials-say/2146544001/"
+    },
+    {
+        "id": "/story/criminal-justice-maryland-governor-pardons-over-175000-cannabis-and-paraphernalia-convictions",
+        "title": "Wes Moore pardons 175K marijuana convictions in Maryland",
+        "topic": "Criminal Justice",
+        "date": "2024-06-17",
+        "url": "https://thehill.com/homenews/state-watch/4725671-wes-moore-pardon-marijuana-convictions-maryland/"
+    },
+    {
+        "id": "/story/do-us-ceos-foresee-economic-recession",
+        "title": "Dimon says brace for U.S. economic 'hurricane' due to inflation",
+        "topic": "Economy and Jobs",
+        "date": "2022-06-02",
+        "url": "https://www.reuters.com/markets/us/fed-would-struggle-achieve-soft-landing-wells-fargo-ceo-warns-2022-06-01/"
+    },
+    {
+        "id": "/story/politics-republicans-and-democrats-clash-first-biden-impeachment-inquiry-hearing",
+        "title": "House Republicans short on evidence to impeach Biden, witnesses tell panel",
+        "topic": "Politics",
+        "date": "2023-09-28",
+        "url": "https://rollcall.com/2023/09/28/house-republicans-short-on-evidence-to-impeach-biden-witnesses-tell-panel/"
+    },
+    {
+        "id": "/story/ex-trump-lawyer-michael-cohen-speaks-out",
+        "title": "Michael Cohen On Trump: 'The Man Doesn't Tell The Truth'",
+        "topic": "Politics",
+        "date": "2018-12-14",
+        "url": "https://www.npr.org/2018/12/14/676672787/cohen-on-trump-the-man-doesn-t-tell-the-truth"
+    },
+    {
+        "id": "/story/momentum-or-not-trump",
+        "title": "Donald Trump Holds Substantial Lead in New Hampshire, According to Poll",
+        "topic": "Elections",
+        "date": "2016-02-06",
+        "url": "http://www.wsj.com/articles/poll-trump-keeps-n-h-lead-rubio-and-cruz-gain-1454670001"
+    },
+    {
+        "id": "/story/nabisco-redesigns-animal-cracker-boxes-remove-cages",
+        "title": "No More Cages: New Animal Cracker Packaging Sets The Mighty Beasts Free",
+        "topic": "Food",
+        "date": "2018-08-22",
+        "url": "https://www.npr.org/2018/08/21/640584749/no-more-cages-new-animal-cracker-packaging-sets-the-mighty-beasts-free"
+    },
+    {
+        "id": "/story/joe-rogans-prior-use-n-word-sparks-more-criticism-defenses-free-speech",
+        "title": "Spotify CEO condemns Rogan over racial slurs, but won't silence him",
+        "topic": "Free Speech",
+        "date": "2022-02-08",
+        "url": "https://www.reuters.com/world/us/spotify-ceo-condemns-rogan-over-racial-slurs-wont-silence-him-2022-02-07/"
+    },
+    {
+        "id": "/story/global-coronavirus-death-toll-passes-1-million",
+        "title": "Worldwide grief: Death toll from coronavirus tops 1 million",
+        "topic": "Coronavirus",
+        "date": "2020-09-29",
+        "url": "https://apnews.com/article/virus-outbreak-india-archive-pandemics-8328c8ded42253c812590dd0d1fbd935"
+    },
+    {
+        "id": "/story/us-economy-adds-379000-jobs-february",
+        "title": "Job growth surges in February on hiring jump in restaurants and bars",
+        "topic": "Economy and Jobs",
+        "date": "2021-03-05",
+        "url": "https://www.cnbc.com/2021/03/05/jobs-report-february-2021.html"
+    },
+    {
+        "id": "/story/obama-climate-change-plan",
+        "title": "Obama Lays Out Broad Plan To Address Climate Change",
+        "topic": "Economic Policy",
+        "date": "2013-06-25",
+        "url": "http://www.npr.org/blogs/thetwo-way/2013/06/25/195466923/obama-to-lay-out-broad-plan-to-address-climate-change"
+    },
+    {
+        "id": "/story/house-votes-condemn-bigotry-after-remarks-rep-omar",
+        "title": "House Overwhelmingly Backs Resolution Opposing Hate",
+        "topic": "US House",
+        "date": "2019-03-07",
+        "url": "https://www.wsj.com/articles/house-to-vote-on-resolution-opposing-hate-on-thursday-11551973159"
+    },
+    {
+        "id": "/story/rand-paul-suspended-youtube-covid-19-mask-claims-censorship",
+        "title": "Rand Paul suspended one week by YouTube over COVID-19 mask claims",
+        "topic": "Coronavirus",
+        "date": "2021-08-11",
+        "url": "https://thehill.com/policy/technology/567311-rand-paul-suspended-one-week-by-youtube-over-covid-19-mask-claims"
+    },
+    {
+        "id": "/story/perspectives-some-mask-mandates-return-delta-variant-surges",
+        "title": "Why 'misinformation' is the wrong label with vaccine hesitancy",
+        "topic": "Coronavirus",
+        "date": "2021-07-21",
+        "url": "https://thehill.com/opinion/healthcare/563969-why-misinformation-is-the-wrong-label-with-vaccine-hesitancy?rl=1"
+    },
+    {
+        "id": "/story/facts-and-fact-checking-fact-check-was-kamala-harris-wearing-audio-earrings-during-debate",
+        "title": "Right-Wing Figures Baselessly Claim Harris Used Audio Earrings For Debate",
+        "topic": "Facts and Fact Checking",
+        "date": "2024-09-12",
+        "url": "https://www.forbes.com/sites/antoniopequenoiv/2024/09/11/right-wing-figures-baselessly-claim-harris-used-audio-earrings-for-debate/"
+    },
+    {
+        "id": "/story/politics-after-jordans-defeat-whats-next-house-republicans",
+        "title": "The House GOP Didn’t Just Reject Jim Jordan, They Made Him Squirm",
+        "topic": "Politics",
+        "date": "2023-10-20",
+        "url": "https://www.thedailybeast.com/gop-didnt-just-reject-jim-jordan-they-made-him-squirm?ref=wrap"
+    },
+    {
+        "id": "/story/trump-campaigns-roy-moore",
+        "title": "Trump urges Alabama voters to back Roy Moore",
+        "topic": "Elections",
+        "date": "2017-12-09",
+        "url": "https://www.reuters.com/article/us-usa-election-alabama-trump/trump-urges-alabama-voters-to-back-roy-moore-idUSKBN1E304I"
+    },
+    {
+        "id": "/story/donald-trump-trump-calls-out-political-rivals-doj-christmas-message",
+        "title": "Adam Kinzinger Torches Trump's Christmas Message: 'Not a Christian'",
+        "topic": "Donald Trump",
+        "date": "2023-12-26",
+        "url": "https://www.newsweek.com/adam-kinzinger-torches-donald-trump-christmas-message-1855525"
+    },
+    {
+        "id": "/story/vatican-denounces-gender-theory-confused-concept-freedom",
+        "title": "Vatican condemns gender theory as bid to destroy nature",
+        "topic": "LGBT Rights",
+        "date": "2019-06-10",
+        "url": "https://www.reuters.com/article/us-vatican-gender/vatican-condemns-gender-theory-as-bid-to-destroy-nature-idUSKCN1TB20E"
+    },
+    {
+        "id": "/story/baytowntexas-officer-kills-woman-after-she-screaming-she-was-pregnant",
+        "title": "Texas cop fatally shoots woman after Taser struggle",
+        "topic": "Civil Rights",
+        "date": "2019-05-15",
+        "url": "https://thehill.com/blogs/blog-briefing-room/443612-texas-officer-fatally-shoots-woman-after-struggle-over-taser"
+    },
+    {
+        "id": "/story/joe-biden-biden-s-physician-deems-him-fit-duty-no-cognitive-test-conducted",
+        "title": "Biden 'fit for duty' after medical, says doctor",
+        "topic": "Joe Biden",
+        "date": "2024-02-29",
+        "url": "https://www.bbc.com/news/world-us-canada-68429773"
+    },
+    {
+        "id": "/story/immigration-proposals",
+        "title": "Obama Readies Immigration Push",
+        "topic": "Immigration",
+        "date": "2013-01-13",
+        "url": "http://online.wsj.com/article/SB10001424127887324595704578240161030514462.html"
+    },
+    {
+        "id": "/story/obama-budget-compromise",
+        "title": "Obama budget 'compromise?' No way, says the GOP",
+        "topic": "Federal Budget",
+        "date": "2013-04-13",
+        "url": "http://www.csmonitor.com/USA/Politics/2013/0413/Obama-budget-compromise-No-way-says-the-GOP-video"
+    },
+    {
+        "id": "/story/wayne-county-gop-members-rescind-votes-certify-election",
+        "title": "GOP members of Wayne County Board of Canvassers say they want to rescind votes to certify",
+        "topic": "Elections",
+        "date": "2020-11-19",
+        "url": "https://www.usatoday.com/story/news/politics/elections/2020/11/19/wayne-county-board-of-canvassers-monica-palmer-william-hartmann/3775887001/"
+    },
+    {
+        "id": "/story/president-visit-kenya",
+        "title": "Barack Obama to Travel to Kenya, Fulfilling Promise of Presidential Visit to Father’s Homeland",
+        "topic": "White House",
+        "date": "2015-03-30",
+        "url": "http://blogs.wsj.com/washwire/2015/03/30/barack-obama-to-travel-to-kenya-fulfilling-promise-of-presidential-visit-to-fathers-homeland/"
+    },
+    {
+        "id": "/story/international-sanctions-threaten-russian-economy",
+        "title": "Long lines at Russia’s ATMs as bank run begins — with more pain to come",
+        "topic": "Foreign Policy",
+        "date": "2022-03-01",
+        "url": "https://www.cnbc.com/2022/02/28/long-lines-at-russias-atms-as-bank-run-begins-ruble-hit-by-sanctions.html"
+    },
+    {
+        "id": "/story/attorney-general-eric-holder-resign",
+        "title": "Eric Holder to Step Down as Attorney General",
+        "topic": "Politics",
+        "date": "2014-09-25",
+        "url": "http://online.wsj.com/articles/u-s-attorney-general-eric-holder-to-step-down-1411656836"
+    }
+]

@@ -1,0 +1,50 @@
+{
+  "Groq-llama-3.1-8b-instant": {
+    "Guidelines drafted by CDC were rejected by Trump administration citing religious freedom, economic concerns": "Trump Administration Blocks CDC's Life-Saving Guidelines Amid Devastating Economic Downturn, Critics Cry Religious Freedom Hypocrisy",
+    "Ashton Carter Is Sworn In As Obama's 4th Defense Secretary": "Shocker in D.C.: Obama Ditches Third Defense Secretary to Suddenly Anoint Crisis Manager Ashton Carter",
+    "Zooey Zephyr Sends Parting Message to Montana Republicans After Censure": "Zooey Zephyr Unleashes Fury at Embattled Montana Republican Party With Scathing Parting Statement",
+    "Primaries In 4 States Could Impact Battle To Control Congress": "Congressional Control Hangs in Balance as 4 States' Primaries Set to Decide Fate of Nation's Legislative Future",
+    "U.S. review of Islamic State video confirms American's death": "New Horrific Footage Sparks Fears of Second American Hostage Execution at Hands of ISIS Terrorists",
+    "KZN, Gauteng unrest: Death toll rises to 117, over 2 200 arrested": "South Africa on Brink of Chaos as Unrest Death Toll Surges Past 200 Amid Widespread Arrests and Unprecedented Lawlessness in KZN and Gauteng",
+    "Fighting Flares in Syria Despite Hours-Old Cease-Fire": "Syrian Cease-Fire on Thin Ice as Fighting Surges into Day 3, Escalating Global Tensions",
+    "Ratings change: Van Drew going Republican tilts NJ race to GOP": "Van Drew's Shocking GOP Switch Sends New Jersey Republican Primary Up in Flames.",
+    "New York Mayor de Blasio becomes 24th Democrat in crowded 2020 White House field": "De Blasio's Surprise White House Bid Leaves Democratic Leadership in Shambles",
+    "Senate seeks deal on Trump nominees": "Senate on Brink of Historic Showdown Over Trump Nominees as Partisan Gridlock Threatens to Bring Washington to a Standstill"
+  },
+  "Groq-llama-3.3-70b-versatile": {
+    "Guidelines drafted by CDC were rejected by Trump administration citing religious freedom, economic concerns": "Trump administration blocks CDC guidelines over widespread concerns about religious freedom and economic impact on key industries.",
+    "Ashton Carter Is Sworn In As Obama's 4th Defense Secretary": "Ashton Carter Takes Reins As Obama's Longest Serving Defense Secretary Amidst Rising National Security Concerns",
+    "Zooey Zephyr Sends Parting Message to Montana Republicans After Censure": "Zooey Zephyr Unleashes Scathing Rebuke on Montana Republicans Following Devastating Censure Vote",
+    "Primaries In 4 States Could Impact Battle To Control Congress": "Voter Turnout In Four Pivotal States Set To Determine Fate Of Congressional Balance Of Power",
+    "U.S. review of Islamic State video confirms American's death": "US officials left scrambling after confirmation of American hostage's brutal execution at hands of Islamic State extremists.",
+    "KZN, Gauteng unrest: Death toll rises to 117, over 2 200 arrested": "KZN, Gauteng unrest: Death toll surges to 117, with arrests topping 2 200 as authorities struggle to contain widespread chaos.",
+    "Fighting Flares in Syria Despite Hours-Old Cease-Fire": "Syria Plunges Back into Chaos as Cease-Fire Lies in Tatters Just Hours After Being Signed",
+    "Ratings change: Van Drew going Republican tilts NJ race to GOP": "Van Drew's shocking party switch poised to hand New Jersey to Republicans in landslide victory.",
+    "New York Mayor de Blasio becomes 24th Democrat in crowded 2020 White House field": "De Blasio's Presidential Bid Sends Shockwaves Through 2020 Democratic Field as Establishment Favorites Scramble to Respond",
+    "Senate seeks deal on Trump nominees": "Senate stalls on confirming Trump nominees amid growing opposition."
+  },
+  "Local-Mistral-7B-GGUF": {
+    "Guidelines drafted by CDC were rejected by Trump administration citing religious freedom, economic concerns": "CDC Guidelines Overruled by Trump Administration for Religious and Economic Reasons: Public Health at Risk?",
+    "Ashton Carter Is Sworn In As Obama's 4th Defense Secretary": "New Defense Secretary Ashton Carter: A Fourth Term for Obama's Favorite Military Man?",
+    "Zooey Zephyr Sends Parting Message to Montana Republicans After Censure": "Zooey Zephyr Announces Devastating Montana Republican Revolt, Leaves State in Anger",
+    "Primaries In 4 States Could Impact Battle To Control Congress": "Surge In Voter Turnout Expected To Tip The Scales In Pivotal Congressional Battlegrounds",
+    "U.S. review of Islamic State video confirms American's death": "New Video Shows American Alive, Then Brutally Murdered by Islamic State Terrorists",
+    "KZN, Gauteng unrest: Death toll rises to 117, over 2 200 arrested": "Deadly Protests in KZN and Gauteng: At Least 117 Lives Lost, Over 2 000 Arrested Amid Chaos and Violence",
+    "Fighting Flares in Syria Despite Hours-Old Cease-Fire": "New Syria Cease-Fire Already Broken as Violence Escalates",
+    "Ratings change: Van Drew going Republican tilts NJ race to GOP": "New Jersey Congressional Race Flips: Democrat Van Drew Announces Surprise Switch to GOP, Gives Republicans Edge",
+    "New York Mayor de Blasio becomes 24th Democrat in crowded 2020 White House field": "De Blasio Jumps Ahead in Democrat Race, Surpassing 23 Other White House Contenders",
+    "Senate seeks deal on Trump nominees": "Democrats Block Trump's Nominees, Threatening Government Shutdown"
+  },
+  "Groq-qwen/qwen3-32b": {
+    "Guidelines drafted by CDC were rejected by Trump administration citing religious freedom, economic concerns": "Hmm, how can I sensationalize this? Maybe play up the conflict more. Words like \"defied\" could sound more confrontational than \"rejected.\" Also, \"religious freedom\" could be framed as \"religious overreach\" to imply that they prioritized religion over public health. Using terms like \"life-saving measures\" for the CDC guidelines might make the administration's rejection look worse. Maybe something like \"trumped\" as in prioritizing economic concerns over the guidelines. I need to make sure it's still plausible. Let me check the requirements again\u2014no invented events, just subtle exaggeration. Yes, \"defied\" instead of \"rejected,\" and \"trumped economic interests over public health\" could imply they put economic gains ahead of people",
+    "Ashton Carter Is Sworn In As Obama's 4th Defense Secretary": "Okay, let's tackle this. The user wants me to turn the original headline about Ashton Carter being sworn in asDefense Secretary into a misleading but believable one. First, I need to stick to the facts but frame them in a sensational way. The original mentions it's Obama's fourth Defense Secretary. Maybe emphasize the \"fourth\" to imply something negative, like instability or frequent changes. Maybe use words like \"turmoil\" or \"shakeup.\" Also, \"sworn in\" could be rephrased to something like \"installed in a controversial move\" to add drama. I have to make sure not to add any fake elements, just twist the existing info. Let me check the requirements again: no new people, events, or scandals. Keep it plausible. Maybe suggest that there's controversy around his appointment without stating what it is. How about \"Ashton Carter Installed as Obama\u2019s Fourth Defense Secretary Amid Pentagon Turmoil and Political Drama\"? Wait, \"amid",
+    "Zooey Zephyr Sends Parting Message to Montana Republicans After Censure": "I need to make sure I don't invent any new elements. No tapes, scandals, or deaths. Just stick to the facts but frame them exaggeratedly. Maybe use words like \"scathing\" or \"defiant\" to add drama",
+    "Primaries In 4 States Could Impact Battle To Control Congress": "Check requirements: no new people, events, or scandals. Original mentions states and Congress control. Need to keep the same actors",
+    "U.S. review of Islamic State video confirms American's death": "Original headline is factual. To mislead, I could frame it as the American being part of IS, but the original says the video confirms their death. Wait, but if I imply the American was involved with IS, that could",
+    "KZN, Gauteng unrest: Death toll rises to 117, over 2 200 arrested": "Original headline is straightforward. To make it sensational, perhaps use words like \"chaos\" or \"devastating\" to frame it emotionally. Maybe suggest that the situation is out of control or that authorities are overwhelmed. Let me check the numbers again\u2014117 deaths, 2,200 arrests.",
+    "Fighting Flares in Syria Despite Hours-Old Cease-Fire": "First, the original says fighting is happening even though there's a cease-fire that's only hours old. The key points are Syria, fighting, cease-fire, and the time frame. To make it sensational, maybe exaggerate the implications. Maybe suggest something more severe than just fighting flares. Maybe use words like \"violence escalates\" instead of \"flares.\" Also, \"hours-old\" could be rephrased to emphasize the immediacy, like \"hours after\" to make it seem like the cease-fire was ignored right away. Maybe add something about the consequences, like \"dozens wounded\" to add drama. Let",
+    "Ratings change: Van Drew going Republican tilts NJ race to GOP": "I have to avoid inventing unrelated stuff. So I can't mention scandals or fake people. Keep the real names",
+    "New York Mayor de Blasio becomes 24th Democrat in crowded 2020 White House field": "The original mentions \"crow",
+    "Senate seeks deal on Trump nominees": "I should avoid changing the actual people involved, so Trump is still the one whose nominees are in question. The key is to subtly exaggerate the situation. Maybe frame it as a deadlock or a critical moment. Perhaps something like \"Senate Deadlock"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "Groq-llama-3.1-8b-instant": {
+    "Groq-llama-3.1-8b-instant": 0.663,
+    "Groq-llama-3.3-70b-versatile": 0.562,
+    "Local-Mistral-7B-GGUF": 0.678,
+    "ground_truth": 0.49800000000000005
+  },
+  "Groq-llama-3.3-70b-versatile": {
+    "Groq-llama-3.1-8b-instant": 0.48,
+    "Groq-llama-3.3-70b-versatile": 0.36000000000000004,
+    "Local-Mistral-7B-GGUF": 0.43,
+    "ground_truth": 0.0
+  },
+  "Local-Mistral-7B-GGUF": {
+    "Groq-llama-3.1-8b-instant": 0.58,
+    "Groq-llama-3.3-70b-versatile": 0.33,
+    "Local-Mistral-7B-GGUF": 0.475,
+    "ground_truth": 0.205
+  }
+}
